@@ -1,0 +1,27 @@
+.caption-cell {
+    text-align: left !important;
+    padding: 6px 10px;
+    vertical-align: top;
+}
+
+.caption-line {
+    margin: 0;
+    font-size: 0.8rem;
+    line-height: 1.15;
+}
+
+.caption-title {
+    color: #d22;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.caption-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    /* batasi 2 baris */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}

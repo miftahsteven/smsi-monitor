@@ -1,0 +1,58 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { Fragment, useContext, useEffect } from "react";
+import Masonry from "react-masonry-css";
+import { Container, Row, Col, Card, CardBody, CardHeader } from "reactstrap";
+import { PortfolioTitle } from "../../Constant";
+import { H4, H5, Image, LI, P } from "../../AbstractElements";
+import GalleryContext from "../../_helper/Gallery";
+import axios from "axios";
+
+const MesonryDescContain = () => {
+  const { masonryImg, setMasonryImg } = useContext(GalleryContext);
+  const breakpointColumnsObj = {
+    default: 4,
+    1100: 3,
+    700: 2,
+    500: 1,
+  };
+
+  useEffect(() => {
+    axios.get(`${process.env.PUBLIC_URL}/api/masonry.json`).then((response) => {
+      setMasonryImg(response.data);
+    });
+  }, []);
+
+  const styles = { width: "100%" };
+  return (
+    <Fragment>
+      <Container fluid={true}>
+        <Row>
+          <Col sm="12">
+            <Card>
+              <CardHeader className=" pb-0">
+                <H5>MASONRY GALLERY WITH DESCRIPTION</H5>
+              </CardHeader>
+              <CardBody className="photoswipe-pb-responsive">
+                <Masonry breakpointCols={breakpointColumnsObj} className="my-masonry-grid masonry-with-dec my-gallery gallery-with-description row grid mb-0" columnClassName="col-xl-3 col-sm-6 col-md-4 grid-item">
+                  {masonryImg.map((element, index) => (
+                    <LI style={{ listStyle: "none" }} key={element.id}>
+                      <a href="#javascript" data-size="1600x950">
+                        <Image attrImage={{ src: require(`../../assets/images/${element.src}`), style: styles, alt: "" }} />
+                        <div className="caption">
+                          <H4>{PortfolioTitle}</H4>
+                          <P>{"is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy."}</P>
+                        </div>
+                      </a>
+                    </LI>
+                  ))}
+                </Masonry>
+              </CardBody>
+            </Card>
+          </Col>
+        </Row>
+      </Container>
+    </Fragment>
+  );
+};
+
+export default MesonryDescContain;

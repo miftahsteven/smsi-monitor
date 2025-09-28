@@ -1,0 +1,113 @@
+{
+  "name": "semsiapp",
+  "homepage": "http://localhost:3000",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^43.3.1",
+    "@ckeditor/ckeditor5-react": "^9.5.0",
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "@fullcalendar/daygrid": "^6.1.15",
+    "@fullcalendar/interaction": "^6.1.15",
+    "@fullcalendar/list": "^6.1.15",
+    "@fullcalendar/react": "^6.1.15",
+    "@fullcalendar/timegrid": "^6.1.15",
+    "@sjmc11/tourguidejs": "^0.0.19",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/user-event": "^14.6.1",
+    "autoprefixer": "10.4.20",
+    "axios": "^1.7.9",
+    "bootstrap": "^5.3.3",
+    "bootstrap-scss": "^5.3.3",
+    "chart.js": "^4.4.7",
+    "d3-cloud": "^1.2.7",
+    "d3-scale": "^4.0.2",
+    "emoji-picker-react": "^4.12.0",
+    "fa-icons": "^0.2.0",
+    "feather-icons": "^4.29.2",
+    "i18next": "^23.16.8",
+    "i18next-browser-languagedetector": "^7",
+    "i18next-http-backend": "^2",
+    "leaflet": "^1.9.4",
+    "npm": "^11.1.0",
+    "pigeon-maps": "^0.22.1",
+    "react": "^19.0.0",
+    "react-accessible-treeview": "^2.11.0",
+    "react-ace": "^14.0.1",
+    "react-apexcharts": "^1.7.0",
+    "react-bootstrap": "^2.10.9",
+    "react-bootstrap-typeahead": "^7.0.0-rc.4",
+    "react-calendar": "^5.1.0",
+    "react-chartjs-2": "^5.3.0",
+    "react-clock": "^5.1.0",
+    "react-countdown": "^2.3.6",
+    "react-countup": "^6.5.3",
+    "react-data-table-component": "^7.6.2",
+    "react-datepicker": "^7.6.0",
+    "react-dom": "^19.0.0",
+    "react-dragula": "^1.1.17",
+    "react-dropzone": "^14.3.5",
+    "react-feather": "^2.0.10",
+    "react-files": "^3.0.3",
+    "react-google-charts": "^5.2.1",
+    "react-hook-form": "^7.54.2",
+    "react-i18next": "^14",
+    "react-icons": "^5.4.0",
+    "react-image-crop": "^11.0.7",
+    "react-leaflet": "^5.0.0",
+    "react-masonry-css": "^1.0.16",
+    "react-perfect-scrollbar": "^1.5.8",
+    "react-photoswipe-gallery": "^3.0.2",
+    "react-range": "^1.10.0",
+    "react-rating": "^2.0.5",
+    "react-router-dom": "^7.1.5",
+    "react-scripts": "^5.0.1",
+    "react-select": "^5.10.0",
+    "react-simple-star-rating": "^5.1.7",
+    "react-simplemde-editor": "^5.2.0",
+    "react-slick": "^0.30.3",
+    "react-to-print": "^3.0.5",
+    "react-toastify": "^11.0.3",
+    "react-transition-group": "^4.4.5",
+    "reactstrap": "^9.2.3",
+    "sass-migrator": "^2.3.1",
+    "slick-carousel": "^1.8.1",
+    "styled-components": "^6.1.15",
+    "sweetalert2": "^11.16.0",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts --max_old_space_size=8096 start",
+    "build": "react-scripts --max_old_space_size=8096 build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "resolutions": {
+    "autoprefixer": "10.4.5"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all"
+  ],
+  "overrides": {
+    "resolve-url-loader": "^5.0.0",
+    "css-select": "^4.1.0",
+    "react-popper": {
+      "react": "^19.0.0",
+      "react-dom": "^19.0.0"
+    }
+  },
+  "devDependencies": {
+    "sass": "1.77.6",
+    "typescript": "4.9.5"
+  }
+}

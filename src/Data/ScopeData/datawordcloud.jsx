@@ -1,0 +1,18 @@
+export const WordData = [
+    { text: 'Haji', value: 1000 },
+    { text: 'Umroh', value: 800 },
+    { text: 'Dana Haji', value: 600 },
+    { text: 'Pendidikan', value: 400 },
+    { text: 'Sosial', value: 200 },
+    { text: 'Zakat', value: 100 },
+    { text: 'Hibah', value: 230 },
+    { text: 'Beasiswa', value: 250 },
+    { text: 'Kuota Haji', value: 106 },
+    { text: 'Antri Haji', value: 50 },
+    { text: 'Biaya Haji', value: 80 },
+    { text: 'Wakaf', value: 66 },
+    { text: 'Infaq', value: 40 },
+    { text: 'Sedekah', value: 20 },
+    { text: 'Dana Sosial', value: 5 },
+    { text: 'Dana Pendidikan', value: 2 },
+];

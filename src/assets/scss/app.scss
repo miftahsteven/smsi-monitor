@@ -1,0 +1,54 @@
+@import "~bootstrap-scss/bootstrap.scss";
+@import "vendors/chartist/chartist";
+
+@import "vendors/svg-icon/svg-icon";
+@import "vendors/font-awesome.scss";
+@import "vendors/flag-icon.scss";
+@import "vendors/icoicon/icons";
+@import "vendors/animate/animate";
+@import "vendors/sticky/sticky";
+@import "vendors/todo/todo";
+@import "vendors/themify.scss";
+
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+// Datepicker
+@import "~react-datepicker/dist/react-datepicker.css";
+
+// Dropzone
+@import "../scss/pages/dropzone";
+
+// ReactToastify
+@import "~react-toastify/dist/ReactToastify.css";
+
+// Typeahead
+@import "~react-bootstrap-typeahead/css/Typeahead.css";
+
+//  ImageCrop
+@import "~react-image-crop/dist/ReactCrop.css";
+
+// Drag&Drop
+@import "~react-dragula/dist/dragula.css";
+
+// Mde EDitor
+@import "~easymde/dist/easymde.min.css";
+
+// ScrollBar
+@import "react-perfect-scrollbar/dist/css/styles.css";
+
+//  ImageCrop
+@import "~react-image-crop/dist/ReactCrop.css";
+
+//tour
+@import "@sjmc11/tourguidejs/src/scss/tour.scss";
+
+//gallery
+@import "photoswipe/dist/photoswipe.css";
+
+//react-Clock
+@import "react-clock/dist/Clock.css";
+
+@import "style.scss";
+
+@import "responsive.scss";

@@ -1,0 +1,491 @@
+/**=====================
+    75. Update CSS Start
+==========================**/
+@import "../utils/variables";
+// image media
+img.media {
+  display: unset;
+  border: none;
+  margin-bottom: 0;
+}
+.dropdown.list-group-item {
+  background-color: unset;
+}
+ul.list-group {
+  display: block;
+  img {
+    width: auto;
+    height: auto;
+  }
+  i {
+    margin-right: unset;
+  }
+}
+.apexcharts-tooltip,
+.apexcharts-xaxistooltip,
+.apexcharts-yaxistooltip {
+  z-index: 7 !important;
+}
+// popover
+.popover {
+  background-color: $white; 
+  border: none;
+  box-shadow: 0 0 20px rgba($primary-color, 0.1);
+  .popover-header {
+    background-color: $primary-light;
+    color: var(--theme-default);
+    border-bottom: none;
+  }
+  .popover-body {
+    color: rgba(43, 43, 43, 0.7);
+  }
+}
+.checkbox_animated,
+.radio_animated {
+  vertical-align: middle;
+}
+.ace_print-margin {
+  background-color: transparent !important;
+}
+// tooltip css start
+.tooltip {
+  &.show {
+    opacity: 1;
+  }
+  &.bs-tooltip-top {
+    .tooltip-arrow {
+      &:before {
+        border-top-color: $primary-light;
+      }
+    }
+  }
+  &.bs-tooltip-bottom {
+    .tooltip-arrow {
+      &:before {
+        border-bottom-color: $primary-light;
+        border-top-color: transparent;
+      }
+    }
+  }
+  &.bs-tooltip-start {
+    .tooltip-arrow {
+      &:before {
+        border-left-color: $primary-light;
+        border-top-color: transparent;
+      }
+    }
+  }
+  &.bs-tooltip-end {
+    .tooltip-arrow {
+      &:before {
+        border-right-color: $primary-light;
+        border-top-color: transparent;
+      }
+    }
+  }
+  .tooltip-inner {
+    background-color: $primary-light;
+    color: var(--theme-default);
+  }
+  .tooltip-arrow {
+    &:before {
+      border-top-color: $primary-light;
+    }
+  }
+}
+// dropdown css start
+.dropdown-basic {
+  .dropdown {
+    .dropdown-content {
+      a {
+        padding: 6px 16px;
+        color: $dark-editor-document;
+        opacity: 0.6;
+        font-size: 13px;
+        border-top: 1px solid $light-semi-gray;
+        background: $white;
+        &:hover {
+          background-color: $white;
+        }
+      }
+      .dropdown-header {
+        padding: 8px 16px;
+        font-weight: 400;
+        color: $dark-color;
+        font-size: 13px;
+      }
+    }
+  }
+  .dropup {
+    .dropup-content {
+      top: auto;
+    }
+  }
+}
+// accordian css start
+.default-according {
+  .card {
+    .card-header {
+      border-radius: 0;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      &.bg-primary,
+      &.bg-secondary {
+        .btn {
+          border-color: $transparent-color;
+          color: $white;
+        }
+      }
+      i {
+        position: initial;
+        font-size: 20px;
+        display: inline-block;
+        vertical-align: text-bottom;
+        margin-right: 5px;
+      }
+      h5 {
+        margin-top: 0;
+      }
+      .btn-link {
+        font-size: 16px;
+        padding: 15px 20px !important;
+        width: 100%;
+        text-align: left;
+        letter-spacing: 0.7px;
+        font-family: Roboto;
+        border: 1px solid $light-semi-gray;
+        border-radius: 0;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+      }
+    }
+    .card-body {
+      padding: 20px;
+      line-height: 22px;
+      border: 1px solid $light-semi-gray;
+      border-radius: 0;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      color: $light-text;
+    }
+  }
+}
+// tab-bootstrap css start
+.nav-tabs {
+  border-bottom-color: $light-semi-gray;
+  .nav-bottom {
+    .nav-item {
+      .nav-link.active {
+        border-color: $light-semi-gray;
+      }
+    }
+  }
+}
+.nav-tabs {
+  .nav-item {
+    &.show {
+      .nav-link {
+        font-weight: 500;
+        border-color: $light-semi-gray;
+      }
+    }
+  }
+  .nav-link {
+    color: $dark-color;
+    &.active {
+      font-weight: 500;
+      border-color: $light-semi-gray;
+    }
+  }
+  &.nav-bottom {
+    .nav-item {
+      .nav-link {
+        &.active {
+          border-color: $light-gray $light-gray $white;
+        }
+      }
+    }
+  }
+}
+.dropdown-menu {
+  box-shadow: 0 0 20px rgba(89, 102, 122, 0.1);
+  border: none;
+  padding: 0;
+  z-index: 3;
+  .dropdown-item {
+    color: $theme-body-font-color;
+    opacity: 0.6;
+    font-size: 13px;
+    padding: 6px 12px;
+    border-top: 1px solid $light-semi-gray;
+    background: $white;
+    &:hover {
+      background-color: $white;
+    }
+  }
+  .dropdown-divider {
+    margin: 0;
+    border-top: 1px solid $gray-60;
+  }
+}
+.border-tab {
+  .nav-tabs {
+    .nav-item {
+      .nav-link {
+        &.active {
+          border-bottom: 2px solid var(--theme-default);
+        }
+        &.show {
+          border-bottom: 2px solid var(--theme-default);
+        }
+        &:focus {
+          border-bottom: 2px solid var(--theme-default);
+        }
+      }
+    }
+  }
+}
+.tabbed-card {
+  .nav-tabs {
+    .nav-item {
+      .nav-link {
+        top: 17px;
+      }
+    }
+  }
+}
+.timeliny {
+  .timeliny-dot::before {
+    font-size: $btn-lg-font-size;
+  }
+}
+.login-card {
+  .login-main {
+    .theme-form {
+      label {
+        font-size: $body-font-size;
+      }
+      .show-hide {
+        top: 50%;
+      }
+    }
+  }
+}
+// faq css end
+.job-filter {
+  .faq-form {
+    .form-control {
+      font-size: 14px;
+    }
+    .search-icon {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+// modal
+.modal-header,
+.modal-footer,
+.modal-content {
+  .btn-close {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    padding: 0.5rem 0.5rem;
+    margin: -0.5rem -0.5rem -0.5rem auto;
+    &:focus {
+      box-shadow: none;
+      outline: none;
+    }
+  }
+}
+#cd-timeline {
+  position: relative;
+  padding: 2em 0;
+	&::before {
+		content: "";
+		position: absolute;
+		top: 33px; 
+		font-size: 1.5rem;
+		height: 100%;
+		width: 2px;
+		background: $light-color;
+		left: 50%;
+    @media only screen and (max-width: 1199px) { 
+      left: -5%;
+    }
+	}
+  @media only screen and (max-width: 575px) { 
+    margin-left: 40px;
+    &::before {
+      left: -8%;
+    }
+  }
+  @media only screen and (max-width: 425px) { 
+    margin-left: 38px;
+    &::before {
+      left: -12%;
+    }
+  }
+  @media only screen and (max-width: 375px) { 
+    margin-left: 29px;
+  }
+}
+.cd-container {
+	width: 90%;
+	max-width: 1170px;
+	margin: 0 auto;
+	z-index: 1;
+}
+
+.cd-timeline-block {
+    margin: 64px 0;
+    @media (max-width: 767px) {
+      margin: 34px 0;
+    }
+    .cd-timeline-content {
+        width: 44%;
+        background-color: $light-color;
+        border-radius: 4px;
+        border-radius: 4px;
+        padding: 30px;
+        position: relative;
+        @media (max-width: 1199px) {
+            width: 100%; 
+            padding: 30px; 
+            margin-bottom: 40px;
+            margin-left: 30px;
+            float: left !important;
+            [dir = rtl] & {
+              margin-left: unset;
+              margin-right: 30px;
+              float: right !important;
+            }
+        }
+        @media (max-width: 768px) {
+          audio {
+            width: 240px !important;
+          }
+        }
+        @media (max-width: 420px) {
+          audio {
+            width: 181px !important; 
+          }
+        }
+    } 
+    &:nth-child(even) {
+      width: 100%;
+      display: flow-root;
+      .cd-timeline-content {
+        float: right;
+        .cd-date {
+          padding-left: 15px;
+          float: left;
+          display: inline-block;
+          position: absolute;
+          width: 100%;
+          right: 40%;
+          top: 6px;
+          @media (max-width: 580px) {
+            display: none;
+          }
+        }
+      }
+    }
+    &:nth-child(odd) {
+      .cd-timeline-content {
+        .cd-date {
+          right: -45%;
+          padding-right: 15px;
+          float: right;
+          position: absolute;
+          top: 6px; 
+          @media only screen and (max-width: 1399px) { 
+            right: -47%;
+          }
+          @media (max-width: 1199px) {
+            position: static;
+            float: none;
+          }
+        }
+      }
+    }
+    .cd-timeline-img {
+        left: 48%;
+        height: 60px;
+        width: 60px;
+        border-radius: 4px;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @media only screen and (max-width: 1399px) { 
+          height: 40px;
+          width: 40px;
+        }
+        @media only screen and (max-width: 680px) { 
+          left: -7%; 
+        }
+        @media only screen and (max-width: 575px) { 
+          left: -11%; 
+        }
+        @media only screen and (max-width: 425px) { 
+          left: -17%; 
+        }
+        i {
+          font-size: 22px;
+        }
+    }
+}
+@media only screen and (max-width: 1199px) and (min-width: 991px) {
+  #cd-timeline::before{
+    left: -20px;
+  }
+  .cd-timeline-block{
+    .cd-timeline-img{
+      left: -35px;
+    }
+  }
+}
+@media only screen and (max-width: 1169px) {
+  #cd-timeline{
+    &::before{
+      left: -35px !important;
+    }
+  }
+  .cd-timeline-block{
+    .cd-timeline-img{
+      left: -50px !important;
+    }
+  }
+}
+@media only screen and (max-width: 767px) {
+  #cd-timeline{
+    &::before{
+      left: -14px !important;
+    }
+  }
+  .cd-timeline-block{
+    .cd-timeline-img{
+      left: -32px !important;
+    }
+  }
+}
+@media only screen and (max-width: 575px) {
+  .cd-timeline-content{
+    margin-left: 7px !important;
+  }
+  .cd-timeline-block{
+    .cd-timeline-img{
+      left: -49px;
+      height: 30px;
+      width: 30px;
+      i{
+        font-size: 16px;
+      }
+    }
+  }
+}
+/**=====================
+    75. Update CSS Ends
+==========================**/
