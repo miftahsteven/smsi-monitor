@@ -51,63 +51,139 @@ export const ServiceContactdata = [
         id: 1,
         srno: '01',
         img: D1,
-        product: 'Pendidikan Islam di Indonesia',
-        time: '20 September 2025',
-        qty: '54146',
-        discount: '65.00%',
+        product: 'Kasus Biro Haji',
+        time: '26 September 2025',
+        qty: '42150',
+        discount: '12.00%',
         prize: '$210326',
-        status: 'Positif',
-        class: 'fa fa-arrow-up font-primary me-1'
+        status: 'Negatif',
+        class: 'fa fa-arrow-down font-secondary me-1',
+        sentimentPositive: 0,
+        sentimentNeutral: 0,
+        sentimentNegative: 1
     },
     {
         id: 2,
         srno: '02',
         img: D2,
-        product: 'Biaya Haji Tahun 2025',
-        time: '21 September 2025',
-        qty: '32015',
-        discount: '95.00%',
-        prize: '$548564',
+        product: 'Kasus Kuota Haji',
+        time: '26 September 2025',
+        qty: '38920',
+        discount: '18.00%',
+        prize: '$185640',
         status: 'Negatif',
-        class: 'fa fa-arrow-up font-primary me-1'
+        class: 'fa fa-arrow-down font-secondary me-1',
+        sentimentPositive: 0,
+        sentimentNeutral: 0,
+        sentimentNegative: 1
     },
     {
         id: 3,
         srno: '03',
-        img: D3,
-        product: 'Pengelolaan Zakat',
-        time: '21 September 2025',
-        qty: '95486',
-        discount: '02.00%',
-        prize: '$884596',
+        img: D4,
+        product: 'Alih Pegawai Wamenag',
+        time: '25 September 2025',
+        qty: '30115',
+        discount: '22.00%',
+        prize: '$143225',
         status: 'Positif',
-        class: 'fa fa-arrow-up font-primary me-1'
+        class: 'fa fa-arrow-up font-primary me-1',
+        sentimentPositive: 1,
+        sentimentNeutral: 0,
+        sentimentNegative: 0
     },
     {
         id: 4,
         srno: '04',
-        img: D4,
-        product: 'Peran Wakaf dalam Pembangunan',
-        time: '22 September 2025',
-        qty: '15495',
-        discount: '43.00%',
-        prize: '$441523',
+        img: D5,
+        product: 'Kemenhaj tracking ASN',
+        time: '29 September 2025',
+        qty: '27844',
+        discount: '15.00%',
+        prize: '$132480',
         status: 'Netral',
-        class: 'fa fa-arrow-down font-secondary me-1'
+        class: 'fa fa-arrows-alt font-warning me-1',
+        sentimentPositive: 0,
+        sentimentNeutral: 1,
+        sentimentNegative: 0
     },
     {
         id: 5,
         srno: '05',
-        img: D5,
-        product: 'Korupsi di Indonesia',
-        time: '24 September 2025',
-        qty: '66251',
-        discount: '88.00%',
-        prize: '$112103',
-        status: 'Negatif',
-        class: 'fa fa-arrow-up font-primary me-1'
+        img: D3,
+        product: 'tes kompetensi BAZNAS',
+        time: '26 September 2025',
+        qty: '54146',
+        discount: '65.00%',
+        prize: '$210326',
+        status: 'Positif',
+        class: 'fa fa-arrow-up font-primary me-1',
+        sentimentPositive: 1,
+        sentimentNeutral: 0,
+        sentimentNegative: 0
     },
+    {
+        id: 7,
+        srno: '07',
+        img: D4,
+        product: 'Halal Indonesia International Expo 2025 (25–28 Sep) & program JPH',
+        time: '26 September 2025',
+        qty: '32015',
+        discount: '12.00%',
+        prize: '$158420',
+        status: 'Positif',
+        class: 'fa fa-arrow-up font-primary me-1',
+        sentimentPositive: 1,
+        sentimentNeutral: 0,
+        sentimentNegative: 0
+    },
+    {
+        id: 8,
+        srno: '08',
+        img: D5,
+        product: 'BPJPH tegaskan pendaftaran sertifikasi halal hanya lewat Kemenag',
+        time: '25 September 2025',
+        qty: '28402',
+        discount: '08.00%',
+        prize: '$126990',
+        status: 'Netral',
+        class: 'fa fa-arrows-alt font-warning me-1',
+        sentimentPositive: 0,
+        sentimentNeutral: 1,
+        sentimentNegative: 0
+    },
+    {
+        id: 9,
+        srno: '09',
+        img: D2,
+        product: '108 santri lolos semifinal MQK Internasional 2025 (menuju 1–7 Okt, Wajo)',
+        time: '27 September 2025',
+        qty: '95486',
+        discount: '02.00%',
+        prize: '$884596',
+        status: 'Positif',
+        class: 'fa fa-arrow-up font-primary me-1',
+        sentimentPositive: 1,
+        sentimentNeutral: 0,
+        sentimentNegative: 0
+    },
+    {
+        id: 10,
+        srno: '10',
+        img: D1,
+        product: 'Kementerian Haji dalam “fase tarwiyah kelembagaan” (transisi layanan)',
+        time: '26 September 2025',
+        qty: '33450',
+        discount: '09.00%',
+        prize: '$169400',
+        status: 'Netral',
+        class: 'fa fa-arrows-alt font-warning me-1',
+        sentimentPositive: 0,
+        sentimentNeutral: 1,
+        sentimentNegative: 0
+    }
 ];
+
 
 export const MediaLainData = [
     {
@@ -191,11 +267,12 @@ export const MediaSmsiData = [
         img: 'https://faktabanten.co.id/wp-content/uploads/2020/12/logo-fakta-Square-mini-1.png',
         product: 'Fakta Banten',
         time: '22 September 2025',
-        qty: '37%',
+        qty: '5%',
         discount: '65.00%',
         prize: '$210326',
         status: 'Positif',
-        class: 'fa fa-arrow-up font-primary me-1'
+        class: 'fa fa-arrow-up font-primary me-1',
+        totalberita: 0
     },
     {
         id: 2,
@@ -203,11 +280,12 @@ export const MediaSmsiData = [
         img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_Pdd8hHoJT4ndjq-3XdYlg9PUBEZ4RiYfKQ&s',
         product: 'Koran Jakarta',
         time: '21 September 2025',
-        qty: '23%',
+        qty: '60%',
         discount: '95.00%',
         prize: '$548564',
         status: 'Negatif',
-        class: 'fa fa-arrow-up font-primary me-1'
+        class: 'fa fa-arrow-up font-primary me-1',
+        totalberita: 6
     },
     {
         id: 3,
@@ -215,11 +293,12 @@ export const MediaSmsiData = [
         img: 'https://yt3.googleusercontent.com/ytc/AIdro_mJAJrpyRPiRZpri2tvU9AJh_n-wpN2RRMoVFUK8m035v8=s900-c-k-c0x00ffffff-no-rj',
         product: 'Indonesia Satu',
         time: '21 September 2025',
-        qty: '10%',
+        qty: '35%',
         discount: '02.00%',
         prize: '$884596',
         status: 'Positif',
-        class: 'fa fa-arrow-up font-primary me-1'
+        class: 'fa fa-arrow-up font-primary me-1',
+        totalberita: 2
     },
     {
         id: 4,
@@ -227,11 +306,12 @@ export const MediaSmsiData = [
         img: 'https://jabaroke.com/wp-content/uploads/2023/01/cropped-favico4.png',
         product: 'Jabar Oke',
         time: '22 September 2025',
-        qty: '29%',
+        qty: '5%',
         discount: '43.00%',
         prize: '$441523',
         status: 'Netral',
-        class: 'fa fa-arrow-down font-secondary me-1'
+        class: 'fa fa-arrow-down font-secondary me-1',
+        totalberita: 0
     },
     {
         id: 5,
@@ -239,11 +319,12 @@ export const MediaSmsiData = [
         img: 'https://korandetak.com/wp-content/uploads/2020/12/3DEDBB0E-F35F-446B-A2D7-E0458DA4F618-e1608104711286.png',
         product: 'Koran Detak',
         time: '24 September 2025',
-        qty: '43%',
+        qty: '5%',
         discount: '88.00%',
         prize: '$112103',
         status: 'Negatif',
-        class: 'fa fa-arrow-up font-primary me-1'
+        class: 'fa fa-arrow-up font-primary me-1',
+        totalberita: 0
     },
     {
         id: 6,
@@ -251,11 +332,12 @@ export const MediaSmsiData = [
         img: 'https://kreatorjabar.com/wp-content/uploads/2023/07/cropped-cropped-logo-kreator-kotak.jpg',
         product: 'Kreator Jabar',
         time: '24 September 2025',
-        qty: '12%',
+        qty: '5%',
         discount: '88.00%',
         prize: '$112103',
         status: 'Negatif',
-        class: 'fa fa-arrow-up font-primary me-1'
+        class: 'fa fa-arrow-up font-primary me-1',
+        totalberita: 0
     },
     {
         id: 7,
@@ -263,13 +345,15 @@ export const MediaSmsiData = [
         img: 'https://yt3.googleusercontent.com/ytc/AIdro_mJAJrpyRPiRZpri2tvU9AJh_n-wpN2RRMoVFUK8m035v8=s900-c-k-c0x00ffffff-no-rj',
         product: 'Media Kabar News',
         time: '21 September 2025',
-        qty: '70%',
+        qty: '5%',
         discount: '02.00%',
         prize: '$884596',
         status: 'Positif',
-        class: 'fa fa-arrow-up font-primary me-1'
+        class: 'fa fa-arrow-up font-primary me-1',
+        totalberita: 0
     }
 ];
+
 
 
 export const TableRowData = [

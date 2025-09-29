@@ -19,10 +19,10 @@ export const MENUITEMS = [
     ],
   },
   {
-    menutitle: "Content-Flow",
+    menutitle: "Publikasi Internal & Distribusi",
     Items: [
       {
-        title: "Content-Flow",
+        title: "Publikasi Internal & Distribusi",
         icon: Airplay,
         type: "link",
         active: true,

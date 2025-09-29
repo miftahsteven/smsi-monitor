@@ -4,7 +4,7 @@ import React, { Fragment } from 'react';
 import { Table } from 'reactstrap';
 import { Date, Name, Quantity } from '../../../../Constant';
 import { Link } from 'react-router-dom';
-import { provinces35 } from '../../../../Data/Peta/provinces35';
+import { provincesOther } from '../../../../Data/Peta/provinces35';
 
 const ServiceContact = () => {
 
@@ -14,7 +14,7 @@ const ServiceContact = () => {
     //tampilkan semua data
     const tableBody = document.querySelector('tbody');
     tableBody.innerHTML = '';
-    provinces35.map((item) => {
+    provincesOther.map((item) => {
       const row = document.createElement('tr');
       row.innerHTML = `
         <td> 
@@ -27,6 +27,9 @@ const ServiceContact = () => {
           </div>
         </td>
         <td>${item.total}</td>
+        <td>${item.positive}</td>
+        <td>${item.neutral}</td>
+        <td>${item.negative}</td>
         <td style="color: ${item.sentiment === 'positif' ? 'blue' : item.sentiment === 'negatif' ? 'red' : 'green'}">${item.sentiment}</td>
       `;
       tableBody.appendChild(row);
@@ -44,7 +47,10 @@ const ServiceContact = () => {
                   <th>Provinsi</th>
                   {/* <th>Ringkasan</th> */}
                   <th>Total</th>
-                  <th>Sent</th>
+                  <th>Pos</th>
+                  <th>Neu</th>
+                  <th>Neg</th>
+                  <th>Sentimen</th>
                   {/* <th>Total Revenue</th> */}
                 </tr>
               </thead>
@@ -52,7 +58,7 @@ const ServiceContact = () => {
                 {
                   //provinces35.map((item) => {
                   //limit 5 item
-                  provinces35.slice(0, 5).map((item) => {
+                  provincesOther.slice(0, 5).map((item) => {
                     return (
                       <tr key={item.id}>
                         <td>
@@ -65,6 +71,9 @@ const ServiceContact = () => {
                           </div>
                         </td>
                         <td>{item.total}</td>
+                        <td>{item.positive}</td>
+                        <td>{item.neutral}</td>
+                        <td>{item.negative}</td>
                         {/* <td>{item.qty}</td> */}
                         {/* <td>
                           <i className={item.class}></i>{item.discount}

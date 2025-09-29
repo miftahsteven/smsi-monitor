@@ -139,96 +139,129 @@ export const TodayProject = [
 
 export const TodayTask = [
     {
-        task: 'Kakanwil Kemenag NTB Lempar Tiang Mikrofon Viral',
-        time: 'Beberapa hari lalu',
+        task: 'KPK Telusuri Alur Pembagian Kuota Tambahan Haji',
+        time: 'Jumat, 26 Sep 2025',
         class: 'progress-bar bg-danger',
         width: '100%',
         percent: '100% Viral',
         btnclass: 'btn light-danger',
-        btn: 'Berita Negatif'
+        btn: 'Berita Negatif',
+        url: 'https://ramadhan.antaranews.com/video/5134217/kpk-telusuri-alur-pembagian-kuota-tambahan-haji',
+        caption: 'Transparansi penyelenggaraan haji itu wajib. Dukung proses hukum, rujuk info resmi, dan jangan sebar spekulasi. #CekFakta #Haji'
     },
     {
-        task: 'Kakanwil Kemenag NTB Minta Maaf Usai Video Viral',
-        time: 'Beberapa hari lalu',
-        class: 'progress-bar bg-warning',
-        width: '80%',
-        percent: '80% Klarifikasi',
-        btnclass: 'btn light-warning',
-        btn: 'Berita Netral'
-    },
-    {
-        task: 'Kementerian Haji & Umrah Mulai Transisi Pegawai dari Kemenag',
-        time: 'Baru-baru ini',
-        class: 'progress-bar bg-info',
-        width: '90%',
-        percent: '90% Transformasi',
-        btnclass: 'btn light-info',
-        btn: 'Berita Positif'
-    },
-    {
-        task: 'Kata Kemenag soal Viral "Tepuk Sakinah" Calon Pengantin',
-        time: 'Kemarin',
-        class: 'progress-bar bg-success',
-        width: '85%',
-        percent: '85% Penjelasan',
-        btnclass: 'btn light-success',
-        btn: 'Berita Netral'
-    },
-    {
-        task: 'Kemenag Dorong Pembentukan Ditjen Pesantren',
-        time: 'Dalam minggu ini',
-        class: 'progress-bar bg-primary',
-        width: '70%',
-        percent: '70% Rencana Kebijakan',
-        btnclass: 'btn light-primary',
-        btn: 'Berita Positif'
-    },
-    {
-        task: 'Komisi VIII DPR Setujui Usulan Kenaikan Anggaran Kemenag 2026',
-        time: 'Baru-baru ini',
-        class: 'progress-bar bg-info',
-        width: '75%',
-        percent: '75% Persetujuan',
-        btnclass: 'btn light-info',
-        btn: 'Berita Positif'
-    },
-    {
-        task: 'KPK Pastikan Tak Terhalang Usut Kasus Kuota Haji 2024',
-        time: 'Beberapa hari lalu',
-        class: 'progress-bar bg-warning',
-        width: '60%',
-        percent: '60% Penegakan Hukum',
-        btnclass: 'btn light-warning',
-        btn: 'Berita Netral'
-    },
-    {
-        task: 'KPK Periksa Dirjen PHU Kemenag Hilman Latief',
-        time: 'Kemarin',
+        task: 'KPK Ungkap Daerah dengan Biro Haji Terbanyak Terima Kuota Khusus',
+        time: 'Jumat, 26 Sep 2025',
         class: 'progress-bar bg-danger',
-        width: '65%',
-        percent: '65% Kasus Haji',
+        width: '95%',
+        percent: '95% Sorotan Nasional',
         btnclass: 'btn light-danger',
-        btn: 'Berita Negatif'
+        btn: 'Berita Negatif',
+        url: 'https://www.antaranews.com/berita/5135077/kpk-ungkap-daerah-dengan-biro-haji-terbanyak-terima-kuota-haji-khusus',
+        caption: 'Integritas layanan haji adalah prioritas. Gunakan jalur resmi, laporkan penawaran mencurigakan. #LayananBersih'
     },
     {
-        task: 'Kemenag Imbau Masyarakat Waspada Hoaks Bantuan Gereja',
-        time: 'Baru-baru ini',
-        class: 'progress-bar bg-success',
-        width: '80%',
-        percent: '80% Imbauan',
-        btnclass: 'btn light-success',
-        btn: 'Berita Positif'
-    },
-    {
-        task: 'Potensi Zakat-Wakaf Capai Rp 220 Triliun, Menag: Bisa Entaskan Kemiskinan',
-        time: 'Baru-baru ini',
-        class: 'progress-bar bg-success',
+        task: 'KPK Sebut Alur Perintah di Kasus Kuota Haji Khusus Sudah Jelas',
+        time: 'Sabtu, 27 Sep 2025',
+        class: 'progress-bar bg-danger',
         width: '90%',
-        percent: '90% Program Sosial',
+        percent: '90% Perkembangan Kasus',
+        btnclass: 'btn light-danger',
+        btn: 'Berita Negatif',
+        url: 'https://gorontalo.antaranews.com/berita/354097/kpk-sebut-alur-perintah-dalam-kasus-kuota-haji-khusus-sudah-jelas',
+        caption: 'Proses penegakan hukum berjalan. ASN Kemenag siap kooperatif, publik harap tenang & mengacu ke kanal resmi. #GoodGovernance'
+    },
+    {
+        task: 'Forsikap Minta KPK Segera Tetapkan Tersangka Kasus Kuota Haji',
+        time: 'Sabtu, 27 Sep 2025',
+        class: 'progress-bar bg-danger',
+        width: '88%',
+        percent: '88% Desakan Publik',
+        btnclass: 'btn light-danger',
+        btn: 'Berita Negatif',
+        url: 'https://www.antaranews.com/berita/5136769/forsikap-minta-kpk-segera-tetapkan-tersangka-kasus-kuota-haji',
+        caption: 'Apresiasi pengawasan publik. Tetap junjung praduga tak bersalah dan tunggu hasil resmi penyidikan. #Transparansi'
+    },
+    {
+        task: 'KPK Ungkap Satu Pengumpul Utama Dana di Kasus Kuota Haji',
+        time: 'Jumat, 26 Sep 2025',
+        class: 'progress-bar bg-danger',
+        width: '85%',
+        percent: '85% Isu Krusial',
+        btnclass: 'btn light-danger',
+        btn: 'Berita Negatif',
+        url: 'https://www.antaranews.com/berita/5134501/kpk-ungkap-hanya-ada-satu-orang-pengumpul-utama-uang-kasus-kuota-haji',
+        caption: 'Bersih-bersih tata kelola dimulai dari fakta. Dukung penindakan & edukasi publik agar penyelenggaraan haji makin akuntabel.'
+    },
+    {
+        task: 'Wamenag: Alih Pegawai ke Kemenhaj Tak Ganggu Persiapan Haji 2026',
+        time: 'Senin, 29 Sep 2025',
+        class: 'progress-bar bg-info',
+        width: '80%',
+        percent: '80% Pernyataan Resmi',
+        btnclass: 'btn light-info',
+        btn: 'Berita Positif',
+        url: 'https://khazanah.republika.co.id/berita/t35b9e451/wamenag-yakin-alih-pegawai-ke-kementerian-haji-tak-ganggu-persiapan-haji',
+        caption: 'Transisi kelembagaan tetap jaga layanan. Target: persiapan Haji 2026 aman, rapi, dan tepat waktu. #Haji2026'
+    },
+    {
+        task: 'Kemenhaj Libatkan KPK untuk Tracking ASN yang Mau Pindah',
+        time: 'Senin, 29 Sep 2025',
+        class: 'progress-bar bg-warning',
+        width: '70%',
+        percent: '70% Kebijakan SDM',
+        btnclass: 'btn light-warning',
+        btn: 'Berita Netral',
+        url: 'https://khazanah.republika.co.id/berita/t3bozh483/kementerian-haji-libatkan-kpk-untuk-tracking-asn-yang-mau-pindah-bagaimana-nasib-orang-lama',
+        caption: 'Screening integritas ASN untuk kelembagaan yang bersih. Reformasi birokrasi = layanan publik yang lebih dipercaya.'
+    },
+    {
+        task: '48 Calon Anggota BAZNAS 2025–2030 Lulus Tes Kompetensi',
+        time: 'Jumat, 26 Sep 2025',
+        class: 'progress-bar bg-success',
+        width: '78%',
+        percent: '78% Tahap Seleksi',
         btnclass: 'btn light-success',
-        btn: 'Berita Positif'
+        btn: 'Berita Positif',
+        url: 'https://kemenag.go.id/nasional/48-calon-anggota-baznas-2025-2030-lulus-tes-kompetensi-lanjut-tahap-wawancara-mNi7Z',
+        caption: 'Selamat untuk 48 kandidat BAZNAS! Langkah lanjut: wawancara & uji kelayakan. Zakat dikelola makin amanah & berdampak. #ZakatUntukNegeri'
+    },
+    {
+        task: 'Program Halal: Halal Indonesia International Expo 2025 (25–28 Sep)',
+        time: 'Kamis–Minggu, 25–28 Sep 2025',
+        class: 'progress-bar bg-success',
+        width: '72%',
+        percent: '72% Program Halal',
+        btnclass: 'btn light-success',
+        btn: 'Berita Positif',
+        url: 'https://kemenag.go.id/nasional/ingin-tahu-program-jaminan-produk-halal-kemenag-sila-kunjungi-halal-international-expo-kemenperin-di-bsd-YrpIu',
+        caption: 'Ekosistem halal untuk perlindungan konsumen & daya saing UMK. Yuk dukung standardisasi halal nasional! #JPH #HalalIndonesia'
+    },
+    {
+        task: '“Tepuk Sakinah”: Cara Kemenag Mudahkan Catin Hafal Esensi Keluarga Sakinah',
+        time: 'Kamis, 25 Sep 2025',
+        class: 'progress-bar bg-primary',
+        width: '65%',
+        percent: '65% Penjelasan',
+        btnclass: 'btn light-primary',
+        btn: 'Berita Netral',
+        url: 'https://kemenag.go.id/nasional/tepuk-sakinah-cara-kemenag-mudahkan-catin-hafal-esensi-keluarga-sakinah-eYHsg',
+        caption: '“Tepuk Sakinah” adalah alat bantu edukasi—bukan kewajiban. Fokusnya memperkuat nilai keluarga yang rukun & tangguh. #KeluargaSakinah'
+    },
+    {
+        task: 'MQK Internasional: 10 Negara Siap Tanding Awal Oktober di Wajo',
+        time: 'Sabtu, 27 Sep 2025',
+        class: 'progress-bar bg-success',
+        width: '75%',
+        percent: '75% Event Pendidikan',
+        btnclass: 'btn light-success',
+        btn: 'Berita Positif',
+        url: 'https://kemenag.go.id/nasional/persiapan-hampir-tuntas-mqk-internasional-pertama-siap-digelar-awal-oktober-di-wajo-FuBqu',
+        caption: 'Dari pesantren untuk dunia: MQK internasional perkuat tradisi literasi keislaman & prestasi santri Indonesia. #PesantrenBerkarya'
     }
-]
+];
+
+
 
 
 export const QuickOptionData = [

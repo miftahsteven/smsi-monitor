@@ -1,4 +1,4 @@
-import { Image } from '../../../../AbstractElements';
+import { Image, P } from '../../../../AbstractElements';
 import { ServiceContactdata, MediaSmsiData } from '../../../../Data/ScopeData';
 import React, { Fragment } from 'react';
 import { Table } from 'reactstrap';
@@ -43,7 +43,7 @@ const ServiceContact = () => {
                             <div className={"progress-bar bg-primary"} role="progressbar" style={{ width: item.qty }} aria-valuenow={item.qty} aria-valuemin="0" aria-valuemax="100"></div>
                           </div>
                         </td>
-                        {/* <td>{item.qty}</td> */}
+                        <td>{item.totalberita} Konten Berita</td>
                         {/* <td>
                           <i className={item.class}></i>{item.discount}
                         </td> */}

@@ -1,7 +1,7 @@
 import { MapContainer, TileLayer, CircleMarker, Tooltip } from 'react-leaflet';
 import L from 'leaflet';
 import { useMemo } from 'react';
-import { provinces35 } from '../../../Data/Peta/provinces35';
+import { provincesOther } from '../../../Data/Peta/provinces35';
 
 // Batas Indonesia (kira-kira): [lat, lng]
 const INDONESIA_BOUNDS = L.latLngBounds(
@@ -45,7 +45,7 @@ const Legend = () => (
 
 export default function IndonesiaMap() {
     const markers = useMemo(
-        () => provinces35.filter(p => typeof p.lat === 'number' && typeof p.lng === 'number'),
+        () => provincesOther.filter(p => typeof p.lat === 'number' && typeof p.lng === 'number'),
         []
     );
 
@@ -82,7 +82,9 @@ export default function IndonesiaMap() {
                         <Tooltip direction="top" offset={[0, -6]} opacity={1}>
                             <div style={{ minWidth: 180 }}>
                                 <div style={{ fontWeight: 700 }}>{p.name}</div>
-                                <div>Sentimen: {p.sentiment}</div>
+                                <div>Positif: {p.positive}</div>
+                                <div>Netral: {p.neutral}</div>
+                                <div>Negatif: {p.negative}</div>
                                 <div>Total berita: {p.total ?? 0}</div>
                             </div>
                         </Tooltip>

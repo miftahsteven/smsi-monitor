@@ -17,13 +17,17 @@ const ServiceContact = () => {
                   <th>Berita</th>
                   {/* <th>Ringkasan</th> */}
                   <th>Tanggal</th>
-                  <th>Sent</th>
+                  <th>+</th>
+                  <th>N</th>
+                  <th>-</th>
+
                   {/* <th>Total Revenue</th> */}
                 </tr>
               </thead>
               <tbody>
                 {
-                  ServiceContactdata.map((item) => {
+                  // limit 5 item
+                  ServiceContactdata.slice(0, 5).map((item) => {
                     return (
                       <tr key={item.id}>
                         <td> <span>{item.srno}</span>
@@ -39,6 +43,9 @@ const ServiceContact = () => {
                           </div>
                         </td>
                         <td>{item.time}</td>
+                        <td>{item.sentimentPositive}</td>
+                        <td>{item.sentimentNeutral}</td>
+                        <td>{item.sentimentNegative}</td>
                         {/* <td>{item.qty}</td> */}
                         {/* <td>
                           <i className={item.class}></i>{item.discount}
@@ -46,7 +53,7 @@ const ServiceContact = () => {
                         {/* <td>{item.prize}</td> */}
                         {/* <td>{item.status}</td> */}
                         {/* buat item.status dengan warna, jika status negatif merah, positif biru, netral hijau */}
-                        <td style={{ color: item.status === 'Positif' ? 'blue' : item.status === 'Negatif' ? 'red' : 'green' }}>{item.status}</td>
+                        {/* <td style={{ color: item.status === 'Positif' ? 'blue' : item.status === 'Negatif' ? 'red' : 'green' }}>{item.status}</td> */}
                       </tr>
                     );
                   })

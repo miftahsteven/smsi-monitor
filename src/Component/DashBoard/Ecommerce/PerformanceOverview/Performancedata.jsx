@@ -4,8 +4,8 @@ export const Data = [
   {
     imagePath: "dashboard-2/p_1.png",
     title: "Total Shared",
-    count: "985624",
-    contain: "^+98%",
+    count: "12",
+    contain: "^+38%",
     class: "ct-chart1",
     chartType: "Line",
     chartlistData: ChartistData1,
@@ -14,7 +14,7 @@ export const Data = [
   {
     imagePath: "dashboard-2/p_1.png",
     title: "Total Dampak",
-    count: "6895",
+    count: "8",
     contain: "-82%",
     class: "ct-chart2",
     chartType: "Line",
@@ -24,7 +24,7 @@ export const Data = [
   {
     imagePath: "dashboard-2/p_3.png",
     title: "Tambahan Akun",
-    count: "12",
+    count: "5",
     contain: "-96%",
     class: "ct-chart3",
     chartType: "Line",

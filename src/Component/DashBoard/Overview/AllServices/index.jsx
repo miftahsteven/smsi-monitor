@@ -1,4 +1,4 @@
-import { H5 } from '../../../../AbstractElements';
+import { H5, P } from '../../../../AbstractElements';
 import ServiceContact from './ServiceContact';
 import ServiceContactStatus from './ServiceContactStatus';
 import { Card, CardBody, CardHeader, Col } from 'reactstrap';
@@ -12,6 +12,7 @@ const AllServices = () => {
         <Card>
           <CardHeader className="pb-0">
             <H5>Sebaran Berita Per Daerah</H5>
+            <P>Data Dari : 25 - 29 September 2025</P>
           </CardHeader>
           <CardBody>
             <ServiceContact />
