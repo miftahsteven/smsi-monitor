@@ -69,7 +69,8 @@ const ManageInvoice = () => {
                                       className: 'img-40 rounded-circle align-top', src: `${dynamicImage(data.imagePath)}`, alt: '', dataoriginaltitle: '', title: ''
                                     }} />
                                     <div className="d-inline-block align-middle">
-                                      <Link to={`${process.env.PUBLIC_URL}/users/userprofile`}>
+                                      {/* arahkan ke istagram dengan alamat instagram.com/data.project */}
+                                      <Link to={`https://instagram.com/${data.project}`} target='_blank'>
                                         <span className="f-w-500">{data.name}</span>
                                         {/* buatkan dibawah nama text small, dan agak kecil */}
                                         <P>{data.project}</P>
