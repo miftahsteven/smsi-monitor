@@ -2,6 +2,8 @@ import { MapContainer, TileLayer, CircleMarker, Tooltip } from 'react-leaflet';
 import L from 'leaflet';
 import { useMemo } from 'react';
 import { provincesOther } from '../../../Data/Peta/provinces35';
+import { useProvincesRealtime } from '../../../Hooks/Provinces';
+
 
 // Batas Indonesia (kira-kira): [lat, lng]
 const INDONESIA_BOUNDS = L.latLngBounds(
@@ -44,13 +46,41 @@ const Legend = () => (
 );
 
 export default function IndonesiaMap() {
-    const markers = useMemo(
-        () => provincesOther.filter(p => typeof p.lat === 'number' && typeof p.lng === 'number'),
-        []
-    );
+    //const { data: realtimeProv, loading } = useProvincesRealtime();
+    const { data: markers, loading } = useProvincesRealtime();
+
+    // const markers = useMemo(() => {
+    //     if (loading && realtimeProv.length === 0) {
+    //         return provincesOther
+    //             .filter(p => typeof p.lat === 'number' && typeof p.lng === 'number')
+    //             .map(p => ({
+    //                 ...p,
+    //                 positive: p.positive ?? 0,
+    //                 neutral: p.neutral ?? 0,
+    //                 negative: p.negative ?? 0,
+    //                 total: p.total ?? 0,
+    //                 sentiment: p.sentiment || 'netral'
+    //             }));
+    //     }
+    //     return realtimeProv;
+    // }, [loading, realtimeProv]);
 
     return (
-        <div style={{ height: 520, width: '100%', borderRadius: 12, overflow: 'hidden' }}>
+        <div style={{ height: 520, width: '100%', borderRadius: 12, overflow: 'hidden', position: 'relative' }}>
+            {loading && (
+                <div style={{
+                    position: 'absolute',
+                    zIndex: 1000,
+                    top: 8,
+                    left: 8,
+                    background: 'rgba(255,255,255,0.9)',
+                    padding: '4px 10px',
+                    borderRadius: 6,
+                    fontSize: 12
+                }}>
+                    Memuat data provinsi...
+                </div>
+            )}
             <MapContainer
                 bounds={INDONESIA_BOUNDS}
                 maxBounds={INDONESIA_BOUNDS}
@@ -62,21 +92,19 @@ export default function IndonesiaMap() {
                 worldCopyJump={false}
             >
                 <TileLayer
-                    // OpenStreetMap default
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                     attribution="&copy; OpenStreetMap contributors"
                 />
-
-                {markers.map((p) => (
+                {markers.map(p => (
                     <CircleMarker
-                        key={p.name}
+                        key={p.code || p.name}
                         center={[p.lat, p.lng]}
-                        radius={Math.min(6 + Math.log1p(p.total || 1) * 3, 14)}
+                        radius={Math.min(6 + Math.log1p(p.total || 1) * 3, 30)}
                         pathOptions={{
                             color: getColor(p.sentiment),
                             fillColor: getColor(p.sentiment),
                             fillOpacity: 0.8,
-                            weight: 1,
+                            weight: 1
                         }}
                     >
                         <Tooltip direction="top" offset={[0, -6]} opacity={1}>
@@ -85,12 +113,11 @@ export default function IndonesiaMap() {
                                 <div>Positif: {p.positive}</div>
                                 <div>Netral: {p.neutral}</div>
                                 <div>Negatif: {p.negative}</div>
-                                <div>Total berita: {p.total ?? 0}</div>
+                                <div>Total: {p.total}</div>
                             </div>
                         </Tooltip>
                     </CircleMarker>
                 ))}
-
                 <Legend />
             </MapContainer>
         </div>

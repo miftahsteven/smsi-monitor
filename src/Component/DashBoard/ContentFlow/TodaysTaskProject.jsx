@@ -1,9 +1,11 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import { Card, CardBody, CardHeader, Col, Row, Table } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import { Completed } from '../../../Constant';
 import { H5, P } from '../../../AbstractElements';
-import { TodayTask } from '../../../Data/DashDefault';
+//import { TodayTask } from '../../../Data/DashDefault';
+import { useTodayTask } from '../../../Hooks/TodayTask';
+
 import {
   FacebookShareButton,
   FacebookIcon,
@@ -40,7 +42,12 @@ async function copyToClipboard(text) {
   }
 }
 
+
 const TodaysTaskProject = () => {
+
+  //const { data: TodayTask, loading } = useTodayTask();
+  const { tasks: TodayTask, loading } = useTodayTask({ orderBy: 'createdAt' });
+
   return (
     <Fragment>
       <Col md="6" className="box-col-12 box-col-6 today-task-sec">
@@ -57,11 +64,13 @@ const TodaysTaskProject = () => {
               <Table className="table-bordernone">
                 <tbody>
                   {
-                    TodayTask.map((item, i) => {
+                    //filter hanya yang statusnya item.show === true
+                    !loading &&
+                    TodayTask.filter(itemdata => itemdata.show === true).map((item, i) => {
                       return (
                         <tr key={i}>
                           <td>
-                            <span><Link to={`${item.url}`}>{item.task}</Link></span>
+                            <span><Link to={`${item.url}`} target='_blank'>{item.task}</Link></span>
                             <P>{item.time}</P>
                             <P>{item.caption}</P>
                           </td>

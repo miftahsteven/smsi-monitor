@@ -1,11 +1,22 @@
 import { Image, P } from '../../../../AbstractElements';
-import { ServiceContactdata, MediaSmsiData } from '../../../../Data/ScopeData';
+//import { ServiceContactdata, MediaSmsiData } from '../../../../Data/ScopeData';
 import React, { Fragment } from 'react';
 import { Table } from 'reactstrap';
 import { Date, Name, Quantity } from '../../../../Constant';
 import { Link } from 'react-router-dom';
+import { useMediaSmsiData } from '../../../../Hooks/MediaSmsiData';
 
 const ServiceContact = () => {
+  //const MediaSmsiData = ServiceContactdata;
+  const { data: MediaSmsiData, loading, error, refresh } = useMediaSmsiData({
+    sortBy: 'totalberita',
+    sortDirection: 'desc',
+    asArray: true,
+  });
+
+  if (loading) return <P>Loading...</P>;
+  if (error) return <P>Error: {error.message}</P>;
+  if (!MediaSmsiData || MediaSmsiData.length === 0) return <P>No data available.</P>;
   return (
     <Fragment>
       <div className="top-sell-table">
@@ -26,7 +37,7 @@ const ServiceContact = () => {
                   MediaSmsiData.map((item) => {
                     return (
                       <tr key={item.id}>
-                        <td> <span>{item.srno}</span>
+                        <td>
                           <div className="t-title">
                             <Link to={`${process.env.PUBLIC_URL}/ecommerce/product`}>
                               <Image attrImage={{ className: 'img-40 rounded-circle align-top', src: `${item.img}`, alt: '' }} />
@@ -40,7 +51,17 @@ const ServiceContact = () => {
                         </td>
                         <td>
                           <div className="progress sm-progress-bar">
-                            <div className={"progress-bar bg-primary"} role="progressbar" style={{ width: item.qty }} aria-valuenow={item.qty} aria-valuemin="0" aria-valuemax="100"></div>
+                            <div className={"progress-bar bg-primary"} role="progressbar"
+                              style={{
+                                //jadikan width adalah string persen dari totalberita, misal totalberita 50, maka width 50%
+                                width: `${Math.min((item.totalberita / 100) * 100, 100)}%`
+                                //width: `${Math.min((item.total / 100) * 100, 100)}`
+                              }}
+                              aria-valuenow={Math.min((item.total / 100) * 100, 100)}
+                              aria-valuemin="0"
+                              aria-valuemax="100">
+
+                            </div>
                           </div>
                         </td>
                         <td>{item.totalberita} Konten Berita</td>

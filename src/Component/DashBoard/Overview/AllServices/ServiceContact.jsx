@@ -4,9 +4,12 @@ import React, { Fragment } from 'react';
 import { Table } from 'reactstrap';
 import { Date, Name, Quantity } from '../../../../Constant';
 import { Link } from 'react-router-dom';
-import { provincesOther } from '../../../../Data/Peta/provinces35';
+//import { provincesOther } from '../../../../Data/Peta/provinces35';
+import { useProvincesRealtime } from '../../../../Hooks/Provinces';
 
 const ServiceContact = () => {
+  //const { data: markers, loading } = useProvincesRealtime();
+  const { data: provincesOther, loading } = useProvincesRealtime();
 
 
   const getAllData = (e) => {

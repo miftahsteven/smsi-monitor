@@ -12,13 +12,10 @@ const AllServices = () => {
         <Card>
           <CardHeader className="pb-0">
             <H5>Sebaran Berita Per Daerah</H5>
-            <P>Data Dari : 25 - 29 September 2025</P>
+            <P>Data Dari : 26 - 30 September 2025</P>
           </CardHeader>
           <CardBody>
             <ServiceContact />
-            {/* <div className="text-center">
-              <a className="f-w-700 btn-more" href="#javascript">{More}...</a>
-            </div> */}
           </CardBody>
         </Card>
       </Col>

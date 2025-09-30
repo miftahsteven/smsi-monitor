@@ -5,13 +5,26 @@ import { Link } from 'react-router-dom';
 import { ContactNumber, Country, Date, Name, Status } from '../../../Constant';
 import { H5, P, Image } from '../../../AbstractElements';
 import PerformanceOverview from '../Ecommerce/PerformanceOverview/PerformanceOverview';
+import { useOfficialSocialMedia } from '../../../Hooks/SocialMediaOfficial';
+
 
 const ManageInvoice = () => {
   const [generalData, setGeneralData] = useState([]);
-  const { InvoiceData, DataDistribusi } = generalData;
-  useEffect(() => {
-    axios.get(`${process.env.PUBLIC_URL}/api/general.json`).then((res) => setGeneralData(res.data.result));
-  }, []);
+  //const { InvoiceData, DataDistribusi } = generalData;
+  // useEffect(() => {
+  //   axios.get(`${process.env.PUBLIC_URL}/api/general.json`).then((res) => setGeneralData(res.data.result));
+  // }, []);
+  //ubah data general.json menjadi data dari Realtime Database path /OfficialSocialMedia  
+
+  //ambil data dari generalData yang memiliki key InvoiceData
+  // const { InvoiceData } = { InvoiceData: generalData };
+  //console.log(InvoiceData);
+  const { data: InvoiceData, loading, error, refresh } = useOfficialSocialMedia({ once: true });
+
+
+  //console.log(InvoiceData);
+
+  //fungsi untuk mengambil gambar dari folder assets/images
   var images = require.context('../../../assets/images', true);
   const dynamicImage = (image) => {
     return images(`./${image}`);
@@ -45,6 +58,7 @@ const ManageInvoice = () => {
                       </thead>
                       <tbody>
                         {
+                          !loading &&
                           InvoiceData.map((data, i) => {
                             return (
                               <tr key={i}>

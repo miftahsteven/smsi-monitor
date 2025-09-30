@@ -15,9 +15,6 @@ const MediaSmsi = () => {
           </CardHeader>
           <CardBody>
             <SmsiData />
-            <div className="text-center">
-              <a className="f-w-700 btn-more" href="#javascript">{More}...</a>
-            </div>
           </CardBody>
         </Card>
       </Col>
