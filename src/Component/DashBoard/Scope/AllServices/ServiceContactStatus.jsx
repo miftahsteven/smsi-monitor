@@ -32,7 +32,7 @@ const ServiceContactStatus = () => {
       .padding(2)
       .rotate(() => (Math.random() > 0.5 ? 0 : 0))
       .font("Arial")
-      .fontSize(d => d.value > 20 ? d3Scale.scaleLinear().domain([20, 70]).range([20, 50])(d.value) : d3Scale.scaleLinear().domain([1, 20]).range([10, 20])(d.value))
+      .fontSize(d => d.value > 20 ? d3Scale.scaleLinear().domain([200, 800]).range([20, 50])(d.value) : d3Scale.scaleLinear().domain([200, 800]).range([10, 20])(d.value))
       .on("end", words => setLayoutWords(words));
 
     layout.start();
