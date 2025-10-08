@@ -1,8 +1,11 @@
 import { MapContainer, TileLayer, CircleMarker, Tooltip } from "react-leaflet";
-import L from "leaflet";
-import { useMemo } from "react";
+import L, { marker } from "leaflet";
+import { useEffect, useMemo } from "react";
 import { provincesOther } from "../../../Data/Peta/provinces35";
-import { useProvincesRealtime } from "../../../Hooks/Provinces";
+import {
+  useMapIndonesia,
+  useProvincesRealtime,
+} from "../../../Hooks/Provinces";
 
 // Batas Indonesia (kira-kira): [lat, lng]
 const INDONESIA_BOUNDS = L.latLngBounds(
@@ -74,9 +77,27 @@ const Legend = () => (
   </div>
 );
 
-export default function IndonesiaMap() {
+export default function IndonesiaMap({ dataFilterAPI }) {
   //const { data: realtimeProv, loading } = useProvincesRealtime();
-  const { data: markers, loading } = useProvincesRealtime();
+  // let { data: markers, loading } = useProvincesRealtime();
+  const { data: markers, loading, refresh } = useMapIndonesia();
+
+  let markerData = markers?.data || [];
+  // markerData.map((item, index) => {
+  //   return console.log(item);
+  // });
+
+  const data = dataFilterAPI;
+
+  if (data && data.data?.local_top_news) {
+    markerData = data.data.local_top_news;
+  }
+
+  useEffect(() => {
+    if (!markers) {
+      refresh();
+    }
+  }, [markers, refresh]);
 
   // const markers = useMemo(() => {
   //     if (loading && realtimeProv.length === 0) {
@@ -103,7 +124,7 @@ export default function IndonesiaMap() {
         overflow: "hidden",
         position: "relative",
       }}
-      className="mb-3"
+      className="my-3"
     >
       {loading && (
         <div
@@ -135,24 +156,24 @@ export default function IndonesiaMap() {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           attribution="&copy; OpenStreetMap contributors"
         />
-        {markers.map((p) => (
+        {markerData.map((p) => (
           <CircleMarker
-            key={p.code || p.name}
-            center={[p.lat, p.lng]}
+            key={p.nama}
+            center={[p.koordinat_ibukota[0], p.koordinat_ibukota[1]]}
             radius={Math.min(6 + Math.log1p(p.total || 1) * 3, 30)}
             pathOptions={{
-              color: getColor(p.sentiment),
-              fillColor: getColor(p.sentiment),
+              color: getColor(p.kesimpulan),
+              fillColor: getColor(p.kesimpulan),
               fillOpacity: 0.8,
               weight: 1,
             }}
           >
             <Tooltip direction="top" offset={[0, -6]} opacity={1}>
               <div style={{ minWidth: 180 }}>
-                <div style={{ fontWeight: 700 }}>{p.name}</div>
-                <div>Positif: {p.positive}</div>
-                <div>Netral: {p.neutral}</div>
-                <div>Negatif: {p.negative}</div>
+                <div style={{ fontWeight: 700 }}>{p.nama}</div>
+                <div>Positif: {p.sentimen_breakdown.positive}</div>
+                <div>Netral: {p.sentimen_breakdown.neutral}</div>
+                <div>Negatif: {p.sentimen_breakdown.negative}</div>
                 <div>Total: {p.total}</div>
               </div>
             </Tooltip>

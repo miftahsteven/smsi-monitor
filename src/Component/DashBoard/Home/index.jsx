@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import { Container, Row } from "reactstrap";
 // import PerformanceOverview from './PerformanceOverview/PerformanceOverview';
 import AllServices from "./AllServices";
@@ -13,18 +13,20 @@ import IndonesiaMap from "./IndonesianMap";
 import FilterDate from "./FilterDate";
 //import MediaSmsi from './AllServices/MediaSmsi';
 
-const OverviewContain = () => {
+const Home = () => {
+  const [dataFilterAPI, setDataFilterAPI] = useState(null);
+
   return (
     <Fragment>
       <Container fluid={true} className="ecommerce-dash">
         <Row className="size-column">
-          <IndonesiaMap />
-          <FilterDate />
-          <AllServices />
-          <MediaSmsi />
+          <IndonesiaMap dataFilterAPI={dataFilterAPI} />
+          <FilterDate sentData={setDataFilterAPI} />
+          <AllServices dataFilterAPI={dataFilterAPI} />
+          <MediaSmsi dataFromAPI={dataFilterAPI} />
         </Row>
       </Container>
     </Fragment>
   );
 };
-export default OverviewContain;
+export default Home;

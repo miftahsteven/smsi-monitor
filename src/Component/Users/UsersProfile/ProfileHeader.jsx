@@ -1,36 +1,60 @@
-import React, { Fragment } from 'react';
-import { Link } from 'react-router-dom';
-import { Card, Col } from 'reactstrap';
-import { H4, H6, LI, UL, Image } from '../../../AbstractElements';
-import Img from '../../../assets/images/user-profile/bg-profile.jpg';
-import { Designer, Follower, Following, Likes } from '../../../Constant';
+import React, { Fragment } from "react";
+import { Link } from "react-router-dom";
+import { Card, Col } from "reactstrap";
+import { H4, H6, LI, UL, Image } from "../../../AbstractElements";
+import Img from "../../../assets/images/logo/smsilogo.jpg";
+import { Designer, Follower, Following, Likes } from "../../../Constant";
 
 const ProfileHeader = () => {
   return (
     <Fragment>
       <Col sm="12">
-        <Card className="profile-header bg-image" style={{ backgroundImage: `url(${Img})`, backgroundSize: 'cover', backgroundPosition: 'center', display: 'block' }}>
+        <Card
+          className="profile-header bg-image"
+          style={{
+            backgroundImage: `url(${Img})`,
+            backgroundSize: "cover",
+            backgroundPosition: "left",
+            display: "block",
+          }}
+        >
           <div className="profile-img-wrrap">
-            <Image attrImage={{ className: 'img-fluid bg-img-cover', src: `${require('../../../assets/images/user-profile/bg-profile.jpg')}`, alt: '' }} />
+            <Image
+              attrImage={{
+                className: "img-fluid bg-img-cover",
+                src: `${require("../../../assets/images/logo/smsilogo.jpg")}`,
+                alt: "",
+              }}
+            />
           </div>
           <div className="userpro-box">
             <div className="img-wrraper">
               <div className="avatar">
-                <Image attrImage={{ className: 'img-fluid', alt: '', src: `${require('../../../assets/images/user/7.jpg')}` }} />
+                <Image
+                  attrImage={{
+                    className: "img-fluid",
+                    alt: "",
+                    src: `${require("../../../assets/images/user.png")}`,
+                  }}
+                />
               </div>
-              <Link className="icon-wrapper" to={`${process.env.PUBLIC_URL}/users/useredit`}>
+              <Link className="icon-wrapper" to={`/`}>
                 <i className="icofont icofont-pencil-alt-5"></i>
               </Link>
             </div>
             <div className="user-designation">
               <div className="title">
                 <a target="_blank" href="#javascript">
-                  <H4>Emay Walter</H4>
-                  <H6>{Designer}</H6>
+                  <H4>John Doe</H4>
+                  <H6>Staff</H6>
                 </a>
               </div>
               <div className="social-media">
-                <UL attrUL={{ className: 'simple-list user-list-social d-flex flex-row' }}>
+                <UL
+                  attrUL={{
+                    className: "simple-list user-list-social d-flex flex-row",
+                  }}
+                >
                   <LI>
                     <a href="https://www.facebook.com/">
                       <i className="fa fa-facebook"></i>
@@ -59,7 +83,11 @@ const ProfileHeader = () => {
                 </UL>
               </div>
               <div className="follow">
-                <UL attrUL={{ className: 'simple-list follow-list d-flex flex-row' }}>
+                <UL
+                  attrUL={{
+                    className: "simple-list follow-list d-flex flex-row",
+                  }}
+                >
                   <LI>
                     <div className="follow-num counter">325</div>
                     <span>{Follower}</span>

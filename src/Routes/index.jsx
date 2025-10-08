@@ -20,15 +20,31 @@ const Routers = () => {
               <Route path={"/"} element={<PrivateRoute />}>
                 {login ? (
                   <Fragment>
-                    <Route exact path={`${process.env.PUBLIC_URL}`} element={<Navigate to={`${process.env.PUBLIC_URL}/dashboard/scope`} />} />
-                    <Route exact path={`/`} element={<Navigate to={`${process.env.PUBLIC_URL}/dashboard/scope`} />} />
+                    <Route
+                      exact
+                      path={`${process.env.PUBLIC_URL}`}
+                      element={
+                        <Navigate to={`${process.env.PUBLIC_URL}/dashboard`} />
+                      }
+                    />
+                    <Route
+                      exact
+                      path={`/`}
+                      element={
+                        <Navigate to={`${process.env.PUBLIC_URL}/dashboard`} />
+                      }
+                    />
                   </Fragment>
                 ) : (
                   ""
                 )}
                 <Route path={`/*`} element={<LayoutRoutes />} />
               </Route>
-              <Route exact path={`${process.env.PUBLIC_URL}/login`} element={<SignIn />} />
+              <Route
+                exact
+                path={`${process.env.PUBLIC_URL}/login`}
+                element={<SignIn />}
+              />
               {authRoutes.map(({ path, Component }, i) => (
                 <Route path={path} element={Component} key={i} />
               ))}

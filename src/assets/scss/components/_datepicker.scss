@@ -151,7 +151,9 @@
   .react-datepicker__quarter-text--selected,
   .react-datepicker__quarter-text--in-selecting-range,
   .react-datepicker__quarter-text--in-range {
-    background-color: var(--theme-default) !important;
+    // background-color: var(--theme-default) !important;
+    background-color: #a6b9e8;
+    color: black;
     &:hover {
       background-color: var(--theme-default) !important;
     }
@@ -172,8 +174,9 @@
   }
   .react-datepicker__day--today,
   .react-datepicker__day--selected {
-    background-color: var(--theme-default) !important;
-    color: $white !important;
+    // background-color: var(--theme-default) !important;
+    // background-color: #216ba580 !important;
+    // color: $white !important;
     border-radius: 0.3rem;
   }
 }

@@ -1,5 +1,12 @@
 import React, { Fragment, useEffect, useState } from "react";
-import { FileText, LogIn, Mail, MoreHorizontal, Settings, User } from "react-feather";
+import {
+  FileText,
+  LogIn,
+  Mail,
+  MoreHorizontal,
+  Settings,
+  User,
+} from "react-feather";
 import { Link } from "react-router-dom";
 import { Media } from "reactstrap";
 import { H6, Image, LI, UL } from "../../AbstractElements";
@@ -11,6 +18,7 @@ import MaxMiniSize from "./MaxMiniSize";
 import Message from "./Message";
 import MoonLight from "./MoonLight";
 import Notification from "./Notification";
+import Img from "../../assets/images/user.png";
 
 const HeaderContain = () => {
   const [profile, setProfile] = useState("");
@@ -26,23 +34,29 @@ const HeaderContain = () => {
     localStorage.clear();
   };
 
-  var images = require.context('../../assets/images/', true);
-  const dynamicImage = (image) => {
-    return images(`./${image}`);
-  };
+  // var images = require.context("../../assets/images/", true);
+  // const dynamicImage = (image) => {
+  //   return images(`./${image}`);
+  // };
 
   return (
     <Fragment>
       <div className="nav-right col pull-right right-menu">
-        <UL attrUL={{ className: `simple-list d-flex flex-row nav-menus ${open ? "open" : ""}` }}>
+        <UL
+          attrUL={{
+            className: `simple-list d-flex flex-row nav-menus ${
+              open ? "open" : ""
+            }`,
+          }}
+        >
           {/* <LI attrLI={{ className: "onhover-dropdown" }}>
             
             <Language />
           </LI> */}
           {/* <ItemCart /> */}
           {/* <Bookmark /> */}
-          <Notification />
-          <Message />
+          {/* <Notification />
+          <Message /> */}
           {/* <MoonLight /> */}
           {/* <MaxMiniSize /> */}
           <LI attrLI={{ className: "onhover-dropdown pe-0" }}>
@@ -50,7 +64,7 @@ const HeaderContain = () => {
               <Image
                 attrImage={{
                   className: "rounded-circle",
-                  src: `${dynamicImage("avtar/emoji/9.png")}`,
+                  src: Img,
                   alt: "",
                 }}
               />
@@ -66,7 +80,7 @@ const HeaderContain = () => {
                   <span>Account </span>
                 </Link>
               </LI>
-              <LI>
+              {/* <LI>
                 <Mail />
                 <Link to={`${process.env.PUBLIC_URL}/email/mailbox`}>
                   <span>Inbox</span>
@@ -83,9 +97,12 @@ const HeaderContain = () => {
                 <Link to={`${process.env.PUBLIC_URL}/users/useredit`}>
                   <span>Settings</span>
                 </Link>
-              </LI>
+              </LI> */}
               <LI attrLI={{ onClick: logout }}>
-                <Link to={`${process.env.PUBLIC_URL}/login`} className="btn btn-light w-100">
+                <Link
+                  to={`${process.env.PUBLIC_URL}/login`}
+                  className="btn btn-light w-100"
+                >
                   <LogIn /> Logout
                 </Link>
               </LI>
@@ -93,7 +110,10 @@ const HeaderContain = () => {
           </LI>
         </UL>
       </div>
-      <div className="d-lg-none col mobile-toggle pull-right" onClick={() => onAdd()}>
+      <div
+        className="d-lg-none col mobile-toggle pull-right"
+        onClick={() => onAdd()}
+      >
         <i>
           <MoreHorizontal />
         </i>
