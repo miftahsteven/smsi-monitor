@@ -25,7 +25,7 @@ const getColor = (sentiment) => {
 };
 
 const Legend = () => (
-  <div className="leaflet-bottom leaflet-left" style={{ padding: "8px" }}>
+  <div className="leaflet-top leaflet-right" style={{ padding: "10px" }}>
     <div
       style={{
         background: "white",
