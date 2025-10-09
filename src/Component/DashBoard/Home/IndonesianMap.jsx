@@ -15,9 +15,9 @@ const INDONESIA_BOUNDS = L.latLngBounds(
 
 const getColor = (sentiment) => {
   switch (sentiment) {
-    case "negatif":
+    case "negative":
       return "#e11d48"; // merah
-    case "positif":
+    case "positive":
       return "#2563eb"; // biru
     default:
       return "#6b7280"; // abu-abu (netral/unknown)
